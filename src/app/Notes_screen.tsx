@@ -4,7 +4,7 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  View,SafeAreaView,
+  View,
 } from "react-native";
 import Colors from "./colorScheme/Colors";
 import { DataListArray } from "./data/DataArray";
@@ -27,12 +27,12 @@ export default function Notes_screen() {
   return (
     
       <KeyboardAvoidingView>
-        <ScrollView>
           {/* Main Container */}
           <View style={styles.main}>
-            {/* Title */}
-            <Text style={styles.apptitle}>Notes_screen</Text>
+            
             <View>
+            {/* Title */}
+            <Text style={styles.apptitle}>Notes Screen</Text>
               <FlatList
                 data={DataListArray}
                 keyExtractor={(item) => item.id}
@@ -66,7 +66,6 @@ export default function Notes_screen() {
               />
             </View>
           </View>
-        </ScrollView>
       </KeyboardAvoidingView>
     
   );

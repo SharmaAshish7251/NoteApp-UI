@@ -53,3 +53,5 @@ export const DataListArray = [
     timestamp: "2026-06-01T06:00:00Z",
   },
 ];
+
+export default DataListArray;
