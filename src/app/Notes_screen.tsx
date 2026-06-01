@@ -24,49 +24,44 @@ export default function Notes_screen() {
   };
 
   return (
-    
-      <KeyboardAvoidingView>
-          {/* Main Container */}
-          <View style={styles.main}>
-            
-            <View>
-            {/* Title */}
-            <Text style={styles.apptitle}>Notes Screen</Text>
-              <FlatList
-                data={DataListArray}
-                keyExtractor={(item) => item.id}
-                renderItem={({ item, index }) => {
-                  const coloritem = Object.values(Colors);
+    <KeyboardAvoidingView>
+      {/* Main Container */}
+      <View style={styles.main}>
+        <View>
+          {/* Title */}
+          <Text style={styles.apptitle}>Notes Screen</Text>
+          <FlatList
+            data={DataListArray}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item, index }) => {
+              const coloritem = Object.values(Colors);
 
-                  return (
-                    <View
-                      style={[
-                        styles.container,
-                        { backgroundColor: coloritem[index] },
-                      ]}
-                    >
-                      {/* Left */}
-                      <View>
-                        <Text style={styles.title}>{item.title}</Text>
-                        <Text style={styles.description}>
-                          {item.Description}
-                        </Text>
-                      </View>
+              return (
+                <View
+                  style={[
+                    styles.container,
+                    { backgroundColor: coloritem[index] },
+                  ]}
+                >
+                  {/* Left */}
+                  <View>
+                    <Text style={styles.title}>{item.title}</Text>
+                    <Text style={styles.description}>{item.Description}</Text>
+                  </View>
 
-                      {/* Right */}
-                      <View style={styles.right}>
-                        <Text style={styles.timestamp}>
-                          {formatTimestamp(item.timestamp)}
-                        </Text>
-                      </View>
-                    </View>
-                  );
-                }}
-              />
-            </View>
-          </View>
-      </KeyboardAvoidingView>
-    
+                  {/* Right */}
+                  <View style={styles.right}>
+                    <Text style={styles.timestamp}>
+                      {formatTimestamp(item.timestamp)}
+                    </Text>
+                  </View>
+                </View>
+              );
+            }}
+          />
+        </View>
+      </View>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -78,6 +73,7 @@ const styles = StyleSheet.create({
     padding: 12,
     margin: 9,
     borderRadius: 12,
+    borderWidth: 1,
   },
   apptitle: {
     fontSize: 24,
@@ -94,6 +90,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: 500,
     color: "grey",
+
   },
   title: {
     fontSize: 18,
