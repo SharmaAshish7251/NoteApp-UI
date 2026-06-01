@@ -1,4 +1,4 @@
-import { Text, View, FlatList, KeyboardAvoidingView,StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import Notes_screen from "./Notes_screen";
 
 

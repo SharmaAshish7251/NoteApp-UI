@@ -1,7 +1,6 @@
 import {
   FlatList,
   KeyboardAvoidingView,
-  ScrollView,
   StyleSheet,
   Text,
   View,
@@ -85,6 +84,7 @@ const styles = StyleSheet.create({
     fontWeight: 700,
     marginBottom: 12,
     alignSelf: "center",
+    marginTop: 12,
   },
 
   timestamp: {
